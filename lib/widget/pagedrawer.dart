@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:app_flutter/pages/pages.dart';
 
 class PageDrawer extends StatelessWidget {
   @override
@@ -17,13 +18,18 @@ class PageDrawer extends StatelessWidget {
           ),
           ListTile(
             title: Text('Page1'),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Page1()));
+            },
           ),
           ListTile(
             leading: Image.network('https://picsum.photos/250?image=9',
                 width: 30, height: 30),
             title: Text('Page2'),
             onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Page2()));
               //controller.jumpToPage(2);
             },
           ),
@@ -33,7 +39,10 @@ class PageDrawer extends StatelessWidget {
               size: 30.0,
             ),
             title: Text('Page3'),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Page3()));
+            },
           ),
         ],
       ),

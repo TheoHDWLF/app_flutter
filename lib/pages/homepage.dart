@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app_flutter/pages/page1.dart';
+import 'package:app_flutter/pages/pages.dart';
 
 class HomePage extends StatelessWidget {
   final _pageController = PageController();
@@ -10,6 +10,8 @@ class HomePage extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Page1(),
+        Page2(),
+        Page3(),
       ],
     );
   }
